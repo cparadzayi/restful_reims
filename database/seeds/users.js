@@ -3,11 +3,13 @@ const bcrypt = require('bcryptjs')
 const users = [
   {
     username: 'kudakwashe',
-    password: hashedPassword('kp')
+    password: hashedPassword('kp'),
+    department: 'engineering'
   },
   {
     username: 'garikai',
-    password: hashedPassword('gg')
+    password: hashedPassword('gg'),
+    department: 'finance'
   }
 ]
 
