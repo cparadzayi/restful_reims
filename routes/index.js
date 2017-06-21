@@ -1,10 +1,13 @@
 
 'use strict'
+
 const passport = require('../auth/passport')
+const routeHelpers = require('./_helpers')
+
 const router = require('express').Router()
 
 router.get('/', (req, res) => {
-	res.json({message: 'success'})
+	routeHelpers.handleResponse(res, 200, 'success')
 })
 
 router.get('/secret', passport.authenticate('jwt', { session: false }), (req, res) => {
